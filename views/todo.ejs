@@ -6,7 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link href="/assets/styles.css" rel="stylesheet" type="text/css"/>
 
-
+        <script src="/assets/todo-list.js"></script>
     </head>
     <body>
         <h1>my to do list</h1>
@@ -16,15 +16,10 @@
             <button type ="submit">add item</button>
         </form>
         <ul>
-            <li>
-              item 1  
-            </li>
-            <li>
-                item 2 
-              </li>
-              <li>
-                item 12 
-              </li>
+            <% for(var i=0;i< todos.length;i++){%>
+           <li>
+               <%= todos[i].item%>
+           </li>     <%  } %>
         </ul>
 
     </div>
