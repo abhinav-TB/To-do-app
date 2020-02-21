@@ -14,10 +14,10 @@ app.post('/todo', urlencodedParser,function(req,res){
     res.json(data);
 });
 app.delete('/todo/:item',function(req,res){
-    data=dat.filter(function(todo){
-        return todo.item.replace(/)
-    })
-
+    data=data.filter(function(todo){
+        return todo.item.replace(/ /g, '-')!=req.paams.item;
+    });
+    res.json({todo: data});
 
 });
 };
