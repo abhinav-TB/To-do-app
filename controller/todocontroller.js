@@ -1,7 +1,8 @@
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose') 
 //connect to databse
-mongoose.connect('mongodb+srv://abhinav:abhinav123@cluster0-fbvaq.mongodb.net/test?retryWrites=true&w=majority',{
+user=process.env.user
+mongoose.connect('mongodb+srv://abhinav:pass@cluster0-fbvaq.mongodb.net/test?retryWrites=true&w=majority',{
     useUnifiedTopology: true,
     useNewUrlParser: true,
     });
